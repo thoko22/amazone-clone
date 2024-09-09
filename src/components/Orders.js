@@ -1,13 +1,12 @@
-// import React from 'react';
-// import "./Order.css";
-// import { db } from "../Firebase";
+import React from "react";
+import "./Order.css";
 
-// const Orders = () => {
-//   return (
-//     <div>
-//         <h1>Your Orders</h1>
-//     </div>
-//   )
-// }
+const Orders = () => {
+  return (
+    <div>
+      <h1>Your Orders</h1>
+    </div>
+  );
+};
 
-// export default Orders;
+export default Orders;

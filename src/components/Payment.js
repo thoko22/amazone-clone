@@ -24,7 +24,6 @@ const Payment = () => {
   const [clientSecret, setClientSecret] = useState(true);
 
   useEffect(() => {
-    //generate stripe secret that will allow us to charge a custommer
     const getClientSecret = async () => {
       const response = await axios({
         method: "post",
@@ -51,7 +50,6 @@ const Payment = () => {
         payment_method: { card: elements.getElement(CardElement) }
       })
       .then(({ paymentIntent }) => {
-        //Payment intent = payment confirmation
         db.collection("user")
           .doc(user?.uid)
           .collection("orders")
@@ -64,9 +62,7 @@ const Payment = () => {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
-        //empty the basket
         emptyBasket();
-        //redirect user to order page
         history.push("/orders");
       });
   };

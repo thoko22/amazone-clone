@@ -28,18 +28,6 @@ const Header = () => {
         <SearchIcon className="search_icon" />
       </div>
 
-      {/* <div className="header_nav">
-        <Link to={user ? "/" : "/login"}>
-          <div className="header_option" onClick={handleAuthentication}>
-            <span className="header_optionOne">
-              Hello {user ? user.email : "Guest"}
-            </span>
-            <span className="header_optionTwo">
-              {user ? "Sign Out" : "Sign In"}
-            </span>
-          </div>
-        </Link> */}
-
       <div className="header_nav">
         <Link to={!user && "/login"}>
           <div className="header_option" onClick={handleAuthentication}>
